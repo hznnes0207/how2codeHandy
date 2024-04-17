@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>Home-how2codeyourwebsite</title>
+    <style>
+     body {
+            background-color: lightgrey;
+            font-family: 'Comfortaa', sans-serif;
+            margin: 0;
+        }
+
+        header {
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            margin: 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .überschrift {
+            font-size: 25px;
+            color: darkgreen;
+            font-family: "Caveat", cursive;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .link-container {
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .link-container a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-container a:hover {
+            background-color: lightgrey;
+        }
+
+        .erklärung-container {
+                background-color: white;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                margin-bottom: 10px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+    </style>
+</head>
+<body>
+
+<header>
+    <p>Home</p>
+    <p class="überschrift">Anleitung zum Coden einer eigenen Website!</p>
+</header>
+
+<div class="container">
+    <div class="link-container">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="toggleCommands()">Befehle HTML/CSS</a>
+        <div id="subCommands" style="display: none;">
+            <a href="Grundgerüst-Handy-Website.html">Grundlage</a>
+            <a href="Text-Handy-Website.html">Text einfügen</a>
+            <a href="Bilder-Handy-Website.html">Bilder einfügen</a>
+            <a href="DIV-Handy-Website.html">"DIV"-Befehl</a>
+            <a href="Link-Handy-Website.html">Link einfügen</a>
+        </div>
+        <a href="Services-Handy-Website.html">Mini-Quiz</a>
+        <a href="Impressum-Handy-Website.html">Impressum</a>
+    </div>
+</div>
+
+
+
+    <section>
+        <div class="erklärung-container">
+            <p>Hi, schön dich hier zu sehen :)! Auf dieser Website werden dir die Basics einer Website, die mit HTML und CSS erstellt wird, beigebracht. Auf der linken Seite findest du etwas versteckt die "ReiterBox". Um sie zu finden, musst du mit der Maus oder dem Finger an den linken Rand farhen. Dann wird sie auftauchen. Dort findest du dann den Punkt "Befehle". Fahre mit deiner Maus darüber und du wirst die einzelnen Kapitel finden, die Schritt für Schritt erklären, wie man eine Website erstellt. Dort wird dir immer zu dem gerade Erklärten ein Beispiel-Code angezeigt. DIesen kannst du mit einem Klick auf kopieren, was wohl, kopieren. Die Bilder kannst du mit einem Klick vergrößern. Du findest noch den Punkt "Mini-Quiz". Dort kannst du sehen, ob du das Gelernte auch verstanden hast ;).  </p>
+            <p>PS: Diese Website ist ein Schulprojekt und hat sehr viel Zeit, Aufwand, Frust aber auch Freude beinhaltet.</p>
+        </div>
+    </section>
+</div>
+
+<footer>
+</footer>
+
+<script>
+    function toggleCommands() {
+        const subCommands = document.getElementById("subCommands");
+        if (subCommands.style.display === "none") {
+            subCommands.style.display = "block";
+        } else {
+            subCommands.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

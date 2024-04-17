@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>HTML/CSS Befehle--how2codeyourwebsite</title>
+    <style>
+        
+body {
+            background-color: lightgrey;
+            font-family: 'Comfortaa', sans-serif;
+            margin: 0;
+        }
+
+        header {
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            margin: 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .überschrift {
+            font-size: 25px;
+            color: darkgreen;
+            font-family: "Caveat", cursive;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .link-container {
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .link-container a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-container a:hover {
+            background-color: lightgrey;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%; 
+            box-sizing: border-box; 
+            position: relative; 
+        }
+
+       
+
+        .button-container {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .button-container button {
+            background-color: #1E1E1E;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        .text p {
+            font-size: 16px;
+        }
+
+        .code {
+            background-color: #1E1E1E;
+            color: white;
+            overflow: auto;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%; 
+            box-sizing: border-box; 
+            position: relative;
+        }
+
+        .box code {
+          background-color: #1E1E1E;
+        }
+
+        .code pre {
+            margin: 0;
+        }
+
+        .image {
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+        }
+
+        .code:hover {
+            transform: scale(1.05);
+        }
+
+        .text:hover {
+            transform: scale(1.05);
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+<p>Link's einfügen</p>
+<p class="überschrift">Anleitung zum Coden einer eigenen Website!</p>
+</header>
+
+<div class="container">
+    <div class="link-container">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="toggleCommands()">Befehle HTML/CSS</a>
+        <div id="subCommands" style="display: none;">
+            <a href="Grundgerüst-Handy-Website.html">Grundlage</a>
+            <a href="Text-Handy-Website.html">Text einfügen</a>
+            <a href="Bilder-Handy-Website.html">Bilder einfügen</a>
+            <a href="DIV-Handy-Website.html">"DIV"-Befehl</a>
+            <a href="Link-Handy-Website.html">Link einfügen</a>
+        </div>
+        <a href="Services-Handy-Website.html">Mini-Quiz</a>
+        <a href="Impressum-Handy-Website.html">Impressum</a>
+    </div>
+</div>
+
+
+
+<div class="box text">
+    <p><li>Um Links auf Websites hinzuzufügen nutzt man den <strong><u> &lt;a ref="LINK"&gt;Beschreibung des Links&lt;/a&gt;</u></strong>.</li></p>
+    <p><li>In diesem Beispiel setzten wir den Link auch in ein <strong><u>&lt;div&gt;.</li></u></strong> </p>
+    <p><li><strong><li>&lt;div&gt;&lt;a href="Link"&gt;Klicken!&lt;/a&gt;&lt;/div&gt;</li></strong> ist der finale Befehl, den wir in den Bereich "section" eintragen.</li></p>
+
+</div>
+<div class="box code">
+    <div class="button-container">
+        <button onclick="copyCode('Unterer-Code-3')">Kopieren</button>
+    </div>
+    <pre id="Unterer-Code-3">
+&lt;div&gt;
+    &lt;a href=
+    "https://youtu.be/dQw4w9WgXcQ?si=QAxgeEUq3p_PTuCY"
+    &gt;Klicken!&lt;/a&gt;
+&lt;/div&gt;   
+    </pre>
+</div>
+<div class="box image">
+  <a href="Link unbearbeitet.png">  <img src="Link unbearbeitet.png" alt="Link unbearbeitet"></a>
+</div>
+<div class="box text">
+<p>Mit dem Befehl <strong><u>"margin" (top, bottom, right, left), "text-align:center;"</u></strong> positionieren wir den Link. Mit <strong><u>"background-color: grey; und mit "border" (...)</u></strong> designen wir noch den Kasten.</p>
+</div>
+<div class="box code">
+    <div class="button-container">
+        <button onclick="copyCode('Unterer-Code-3')">Kopieren</button>
+    </div>
+    <pre id="Unterer-Code-3">
+&lt;style&gt;
+    .Linkcontainer {
+        text-align: center;
+        border: 2px solid black;
+        background-color: grey;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 600px;
+        margin-left: 600px;
+    }
+&lt;/style&gt;
+
+
+
+
+    </pre>
+</div>
+<div class="box image">
+    <a href="Link Fertig.png">  <img src="Link Fertig.png" alt="Link Fertig"></a>
+</div>
+
+
+<footer>
+    
+</footer>
+
+<script>
+           function copyCode(elementId){
+                       const text = document.getElementById(elementId).innerText;
+                       navigator.clipboard.writeText(text).then(function() {
+                           alert('Copied the text!');
+                       }).catch(function(err) {
+                           console.error('Error in copying text: ', err);
+                       });
+                   }
+               
+               function toggleCommands() {
+                   const subCommands = document.getElementById("subCommands");
+                   if (subCommands.style.display === "none") {
+                       subCommands.style.display = "block";
+                   } else {
+                       subCommands.style.display = "none";
+                   }
+               }
+
+
+</script>
+
+</body>
+</html>
+    

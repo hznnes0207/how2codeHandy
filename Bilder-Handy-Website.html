@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>Bilder einfügen-how2codeyourwebsite</title>
+    <style>
+
+body {
+            background-color: lightgrey;
+            font-family: 'Comfortaa', sans-serif;
+            margin: 0;
+        }
+
+        header {
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            margin: 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .überschrift {
+            font-size: 25px;
+            color: darkgreen;
+            font-family: "Caveat", cursive;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .link-container {
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .link-container a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-container a:hover {
+            background-color: lightgrey;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%; 
+            box-sizing: border-box; 
+            position: relative; 
+        }
+
+       
+
+        .button-container {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .button-container button {
+            background-color: #1E1E1E;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        .text p {
+            font-size: 16px;
+        }
+
+        .code {
+            background-color: #1E1E1E;
+            color: white;
+            overflow: auto;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%; 
+            box-sizing: border-box; 
+            position: relative;
+        }
+
+        .box code {
+          background-color: #1E1E1E;
+        }
+
+        .code pre {
+            margin: 0;
+        }
+
+        .image {
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+        }
+
+        .code:hover {
+            transform: scale(1.05);
+        }
+
+        .text:hover {
+            transform: scale(1.05);
+        }
+
+    
+
+    </style>
+</head>
+<body>
+
+<header>
+<p>Bilder einfügen</p>
+<p class="überschrift">Anleitung zum Coden einer eigenen Website!</p>
+</header>
+
+<div class="container">
+    <div class="link-container">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="toggleCommands()">Befehle HTML/CSS</a>
+        <div id="subCommands" style="display: none;">
+            <a href="Grundgerüst-Handy-Website.html">Grundlage</a>
+            <a href="Text-Handy-Website.html">Text einfügen</a>
+            <a href="Bilder-Handy-Website.html">Bilder einfügen</a>
+            <a href="DIV-Handy-Website.html">"DIV"-Befehl</a>
+            <a href="Link-Handy-Website.html">Link einfügen</a>
+        </div>
+        <a href="Services-Handy-Website.html">Mini-Quiz</a>
+        <a href="Impressum-Handy-Website.html">Impressum</a>
+    </div>
+</div>
+
+
+
+
+
+    <div class="box text">
+        <p>Nun haben wir die erste richtige Schrift hinzugefügt und direkt formatiert. Als nächstes fügen wir ein Bild hinzu.</p>
+        <p>Dazu gehen wir in den "Sektion"-Abschnitt. Befolge nun die nächsten Schritte/p>
+        <p><li>Gebe den Befehl <strong><u>&lt;img src="Beispiel Bild.JPG" 
+            alt="Beispiel Bild"&gt;</u></strong>ein.</li></p>
+        <p><li>Der Name des Bildes ist egal und ist immer anders und anpassbar.</li></p>
+    </div>
+    <div class="box code">
+        <div class="button-container">
+            <button onclick="copyCode('Bilder einfügen')">Kopieren</button>
+        </div>
+        <pre id="Bilder einfügen">
+    &lt;section&gt;
+        &lt;img src="Beispiel Bild.JPG" 
+        alt="Beispiel Bild"&gt;
+    &lt;/section&gt;
+        </pre>
+    </div>
+    <div class="box image">
+       <a href="Bilder einfügen.png"> <img src="Bilder einfügen.png" alt="Bilder einfügen"></a>
+    </div>
+    <div class="box text">
+        <p>Das Bild ist jetzt auf der Website, jedoch ist es sehr groß und hat keinen Abstand zum Rand. Zudem ist viel vom Bild abgeschnitten.</p>
+        <p>Diese Fehler lassen sich beheben, indem wir wieder in den CSS-Berreich oder auch den "Style"-Berreich gehen. Dort gehen wir in den "img"-Abschnitt und geben folgendes ein.</p>
+        <p><li>Für die Höhe des Bildes geben wir <strong><u>"height: 300px;"</u></strong> ein.</li></p>
+        <p><li>Der Audruck <strong><u>"width:600px;"</u></strong> repräsentiert die Breite des Bildes. </li></p>
+    </div>
+    <div class="box code">
+        <div class="button-container">
+            <button onclick="copyCode('Verschobenes Bild')">Kopieren</button>
+        </div>
+        <pre id="Verschobenes Bild">
+          
+    &lt;style&gt;
+        img {
+              height: 300px;
+              width: 600px;
+    }
+    &lt;/style&gt;
+
+        </pre>
+    </div>
+    <div class="box image">
+       <a href="Bild verschoben links.png"> <img src="Bild verschoben links.png" alt="Verschobenes Bild"></a>
+    </div>
+    <div class="box text">
+    <p>Das Bild hat nun eine gute Größe. Jodoch ist es noch sehr weit links. Wir willen es mittig.</p>
+    <p>Um dies zu erreichen nutzen wir folgende Befehle:</p>
+    <p><li>Mit <strong>"margin:auto;"</u></strong> in dem CSS-Abschnitt "img" bringen wir das Bild in die Mitte.</li></p>
+    <p><li>Mit dem Befehl, <strong><u>"display:lock;"</u></strong> wird es anschließend auch in der Mitte der Website sichtbar.</li></p>
+    </div>
+    <div class="box code">
+        <div class="button-container">
+            <button onclick="copyCode('Zentriertes Bild')">Kopieren</button>
+        </div>
+        <pre id="Zentriertes Bild">
+    &lt;style&gt;
+    img {
+        height: 300px;
+        width: 600px;
+        display: block;
+        margin: auto;
+        
+    }
+    &lt;/style&gt;
+
+        </pre>
+    </div>
+    <div class="box image">
+       <a href="Bild zentriert.png"> <img src="Bild zentriert.png" alt="Zentriertes Bild"></a>
+    </div>
+    <div class="box text">
+        <p>Um das Bild noch etwas von der Website zu trennen werden wir noch ein weiteres Element in den CSS-Abschnitt "img" einfügen.</p>
+        <p><li>Wir benötigen den Befehl <strong><u>"border:10 px solid #110d0d;"</u></strong></li></p>
+        <p><li>10 px ist die Breite der Border.</li></p>
+        <p><li>"Solid" bedeutet, dass die Border eine feste Linie eigestellt wird.</li></p>
+        <p><li>"#110d0d" ist eine Farbe. (Schwarz)</li></p>
+    </div>
+    <div class="box code">
+        <div class="button-container">
+            <button onclick="copyCode('Rahmen und Abstand')">Kopieren</button>
+        </div>
+        <pre id="Rahmen und Abstand">
+    &lt;style&gt;
+    img {
+        height: 300px;
+        width: 600px;
+        display: block;
+        margin: auto;
+        margin-top: 100px;
+        border: 10px solid #110d0d;
+    }
+    &lt;/style&gt;
+        </pre>
+    </div>
+    <div class="box image">
+       <a href="Rahmen und Abstand.png"> <img src="Rahmen und Abstand.png" alt="Rahmen und Abstand"></a>
+    </div>
+    <footer>
+    
+    </footer>
+    
+    <script>
+         function copyCode(elementId){
+                       const text = document.getElementById(elementId).innerText;
+                       navigator.clipboard.writeText(text).then(function() {
+                           alert('Copied the text!');
+                       }).catch(function(err) {
+                           console.error('Error in copying text: ', err);
+                       });
+                   }
+               
+               function toggleCommands() {
+                   const subCommands = document.getElementById("subCommands");
+                   if (subCommands.style.display === "none") {
+                       subCommands.style.display = "block";
+                   } else {
+                       subCommands.style.display = "none";
+                   }
+               }
+       
+       
+    
+    </script>
+    
+    </body>
+    </html>
+        

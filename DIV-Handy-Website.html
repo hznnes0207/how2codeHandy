@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>DIV einfügen-how2codeyourwebsite</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            font-family: 'Comfortaa', sans-serif;
+            margin: 0;
+        }
+
+        header {
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            margin: 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .überschrift {
+            font-size: 25px;
+            color: darkgreen;
+            font-family: "Caveat", cursive;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .link-container {
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .link-container a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-container a:hover {
+            background-color: lightgrey;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%; 
+            box-sizing: border-box; 
+            position: relative; 
+        }
+
+       
+
+        .button-container {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .button-container button {
+            background-color: #1E1E1E;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        .text p {
+            font-size: 16px;
+        }
+
+        .code {
+            background-color: #1E1E1E;
+            color: white;
+            overflow: auto;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%; 
+            box-sizing: border-box; 
+            position: relative;
+        }
+
+        .box code {
+          background-color: #1E1E1E;
+        }
+
+        .code pre {
+            margin: 0;
+        }
+
+        .image {
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+        }
+
+        .code:hover {
+            transform: scale(1.05);
+        }
+
+        .text:hover {
+            transform: scale(1.05);
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+<p>Der "DIV"-Befehl</p>
+<p class="überschrift">Anleitung zum Coden einer eigenen Website!</p>
+</header>
+
+<div class="container">
+    <div class="link-container">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="toggleCommands()">Befehle HTML/CSS</a>
+        <div id="subCommands" style="display: none;">
+            <a href="Grundgerüst-Handy-Website.html">Grundlage</a>
+            <a href="Text-Handy-Website.html">Text einfügen</a>
+            <a href="Bilder-Handy-Website.html">Bilder einfügen</a>
+            <a href="DIV-Handy-Website.html">"DIV"-Befehl</a>
+            <a href="Link-Handy-Website.html">Link einfügen</a>
+        </div>
+        <a href="Services-Handy-Website.html">Mini-Quiz</a>
+        <a href="Impressum-Handy-Website.html">Impressum</a>
+    </div>
+</div>
+
+
+
+
+    <div class="box text">
+        <p>Der Text, der bis jetzt auf der Website ist, reicht uns nicht mehr. Wir wollen mehr Text.</p>
+        <p>Der Text soll aber nur in einem bestimmten Bereich auf der Website dargestellt werden. Dies ist mit dem klassischem <strong><u>&lt;p&gt;</u></strong> nicht mehr möglich. Man brauch eine Erweiterung. Wir benutzen dazu den <strong><u>"Div-Befehl"</u></strong>.</p>
+        <p><li>Ein "Div-Element" strukturiert und gruppiert Elemente auf einer HTML-Seite.</li></p>
+        <p><li>In unserem Fall sind wir noch im Abschnitt "Section" und beginnen mit <strong><u>&lt;div&gt;</u></strong>, dann mit <strong><u>&lt;p&gt;</u></strong> und fügen dann unseren Text ein, den wir schreiben wollen.</li></p>
+        <p><li>Wir beenden die Befehle wie gewohnt mit <strong><u>&lt;/div&gt;</u></strong> und direkt danach <strong><u>&lt;/p&gt;</u></strong>.</li></p>
+    </div>
+    <div class="box code">
+        <div class="button-container">
+            <button onclick="copyCode('Div unbearbeitet')">Kopieren</button>
+        </div>
+        <pre id="Div unbearbeitet">
+    &lt;div&gt;
+        &lt;p&gt;Das ist eine Website, die 
+        erklären soll wie man selber eine 
+        Website coden kann. Mithilfe der 
+        ganzen Befehle, ist es danach 
+        selber möglich, eine komplett 
+        eigene und individuelle Website 
+        zu coden!&lt;/p&gt;
+    &lt;/div&gt;
+        
+        </pre>
+    </div>
+    <div class="box image">
+      <a href="Div ohne Bearbeitung.png">  <img src="Div ohne Bearbeitung.png" alt="Div unbearbeitet"></a>
+    </div>
+    <div class="box text">
+        <p>Jetzt ist unser gewünschter Text zwar auf der Website, aber er ist noch ungeordnet, nicht auf eine Gewisse Zone der Seite beschränkt und auch nicht strunkturiert.</p>
+        <p>Dies ändern wir im CSS-Abschnitt "div".</p>
+        <p><li>Damit wir den Text unmranden können, müssen wir wieder das "Border-Element" nutzen. Schreiben wir nun <strong><u>"border: 2px solid black auf</u></strong>. </li></p>
+        <p><li>Wir geben der Box die durch den obrigen Befehl entsteht nun einen Abstand nach oben mit dem Befehl <strong><u>"margin-top: 100px"</u></strong>.</li></p>
+        <p><li>Nun fehlen nur noch die Abstande nach links und reckts. Mit <strong><u>"margin-left: 300px"</u></strong> und <strong><u>"margin-right: 300px"</u></strong>, können wir diese ausführen.</li></p>
+    </div>
+    <div class="box code">
+        <div class="button-container">
+            <button onclick="copyCode('Div bearbeitet')">Kopieren</button>
+        </div>
+        <pre id="Div bearbeitet">
+    &lt;style&gt;
+        div {
+            border: 2px solid black;
+            margin-top: 100px;
+            margin-right: 300px;
+            margin-left: 300px;
+            }
+    &lt;/style&gt;
+        </pre>
+    </div>
+    <div class="box image">
+        <a href="Div-Element-fertig.png"><img src="Div-Element-fertig.png" alt="Div fertig"></a>
+    </div>
+    <footer>
+    
+    </footer>
+    
+    <script>
+       function copyCode(elementId){
+                       const text = document.getElementById(elementId).innerText;
+                       navigator.clipboard.writeText(text).then(function() {
+                           alert('Copied the text!');
+                       }).catch(function(err) {
+                           console.error('Error in copying text: ', err);
+                       });
+                   }
+               
+               function toggleCommands() {
+                   const subCommands = document.getElementById("subCommands");
+                   if (subCommands.style.display === "none") {
+                       subCommands.style.display = "block";
+                   } else {
+                       subCommands.style.display = "none";
+                   }
+               }
+       
+    
+    
+    </script>
+    
+    </body>
+    </html>
+        
